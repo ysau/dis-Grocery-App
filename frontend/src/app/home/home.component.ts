@@ -23,7 +23,7 @@ export class HomeComponent {
     if (+this.hour < 9) {
       this.router.navigate(['./now/'.concat(this.dayOfWeek).concat('/').concat(this.hour).concat('/early')]);
     }
-    if (0 < +this.hour && +this.hour < 20) {
+    if (9 < +this.hour && +this.hour < 20) {
       this.router.navigate(['./now/'.concat(this.dayOfWeek).concat('/').concat(this.hour).concat('/open')]);
     } else {
       this.router.navigate(['./tomorrow/'.concat(this.dayOfWeek).concat('/closed')]);
