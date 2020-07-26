@@ -1,0 +1,81 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(../../assets/images/trader_joes.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.overlay {
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  overflow: auto;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.grid {
+  z-index: 2;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 10px;
+  height: 100%;
+  max-height: 500px;
+  margin: auto;
+  padding: 0;
+}
+
+.item-text {
+  z-index: 13;
+  grid-row: 1 / 2;
+}
+
+.item-text h1 {
+  color: white;
+  font-weight: bold;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.item-button-now {
+  grid-row: 3 / 4;
+  text-align: center;
+}
+
+.item-button-tomorrow {
+  grid-row: 6 / 7;
+  text-align: center;
+}
+
+.button, button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+}
+
+.button:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}

@@ -1,0 +1,38 @@
+h4 {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+p {
+  margin-left: 10px;
+}
+
+.store-container {
+  outline-style: none;
+  outline-color: gray;
+  outline-width: thin;
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.location {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.address {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.direction {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+}
+
+i.material-icons {
+  font-size: 50px;
+}

@@ -1,0 +1,5 @@
+<h1>Least crowded stores</h1>
+<h4> {{ message}}</h4>
+<ng-container *ngFor="let store_id of stores">
+  <app-store-detail [hour]="" [show_time]="false" [store_id]="store_id"></app-store-detail>
+</ng-container>

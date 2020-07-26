@@ -1,0 +1,10 @@
+<div class="store-container">
+  <div *ngIf="!show_time" class="location"><h4>{{ location}}</h4></div>
+  <div *ngIf="show_time" class="location"><h4>{{ location }} at {{ hour}}</h4></div>
+  <div class="address"><p>{{ address }}</p></div>
+  <div class="direction">
+    <a [attr.href]="link"
+       class="button fancy-button"><i
+      class="material-icons">directions</i></a>
+  </div>
+</div>
