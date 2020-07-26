@@ -21,9 +21,9 @@ export class HomeComponent {
     this.dayOfWeek = this.datePipe.transform(new Date(), 'EEE', 'PDT')
     this.hour = this.datePipe.transform(new Date(), 'H', 'PDT')
     if (+this.hour < 9) {
-      this.router.navigate(['./now/'.concat(this.dayOfWeek).concat('/').concat(this.hour).concat('/early')]);
+      this.router.navigate(['./now/'.concat(this.dayOfWeek).concat('/').concat(String(9)).concat('/early')]);
     }
-    if (8 < +this.hour && +this.hour < 20) {
+    else if (8 < +this.hour && +this.hour < 20) {
       this.router.navigate(['./now/'.concat(this.dayOfWeek).concat('/').concat(this.hour).concat('/open')]);
     } else {
       this.router.navigate(['./tomorrow/'.concat(this.dayOfWeek).concat('/closed')]);
